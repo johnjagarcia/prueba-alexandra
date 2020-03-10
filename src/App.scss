@@ -1,0 +1,139 @@
+$color-blue-nav: #174774;
+$color-gray-box-shadow: rgba(136, 136, 143, 1);
+
+//bloque de estilos color gradiante de fondo en el nav usé un placeholder de SASS
+//para incluir todo este largo codigo que genero el gradiante sin cargar la clase nav
+%color_Gradiant_nav {
+  background: rgba(129, 72, 234, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(129, 72, 234, 1) 0%,
+    rgba(23, 71, 116, 1) 1%,
+    rgba(32, 124, 229, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(129, 72, 234, 1)),
+    color-stop(1%, rgba(23, 71, 116, 1)),
+    color-stop(100%, rgba(32, 124, 229, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(129, 72, 234, 1) 0%,
+    rgba(23, 71, 116, 1) 1%,
+    rgba(32, 124, 229, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(129, 72, 234, 1) 0%,
+    rgba(23, 71, 116, 1) 1%,
+    rgba(32, 124, 229, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(129, 72, 234, 1) 0%,
+    rgba(23, 71, 116, 1) 1%,
+    rgba(32, 124, 229, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(129, 72, 234, 1) 0%,
+    rgba(23, 71, 116, 1) 1%,
+    rgba(32, 124, 229, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8148ea', endColorstr='#207ce5', GradientType=1 );
+}
+%box_shadow_section_center {
+  -webkit-box-shadow: 2px 19px 15px -3px rgba(136, 136, 143, 0.59);
+  -moz-box-shadow: 2px 19px 15px -3px rgba(136, 136, 143, 0.59);
+  box-shadow: 2px 19px 15px -3px rgba(136, 136, 143, 0.59);
+}
+%box_shadow_button {
+  -webkit-box-shadow: 2px 8px 15px 1px rgba(136, 136, 143, 0.75);
+  -moz-box-shadow: 2px 8px 15px 1px rgba(136, 136, 143, 0.75);
+  box-shadow: 2px 8px 15px 1px rgba(136, 136, 143, 0.75);
+}
+
+//section nav
+.nav {
+  @extend %color_Gradiant_nav;
+  height: 80px;
+  width: auto;
+  background-color: $color-blue-nav;
+  -webkit-box-shadow: -1px 8px 15px 1px $color-blue-nav;
+  -moz-box-shadow: -1px 8px 15px 1px rgba(22, 12, 168, 1);
+  box-shadow: -1px 8px 15px 1px rgba(22, 12, 168, 1);
+  &_logo__nav {
+    border: 1px solid blanchedalmond;
+  }
+}
+//section central
+
+.box_center {
+  @extend %box_shadow_section_center;
+  border-radius: 8%;
+  margin: auto;
+  width: 350px;
+  height: 470px;
+  margin-top: 60px;
+}
+
+h2 {
+  padding-left: 68px;
+}
+.img {
+  width: 158px;
+  height: 100px;
+  padding-left: 89px;
+  margin-bottom: 20px;
+}
+.containerText2 {
+  margin: auto;
+  padding-left: 24px;
+  ._text2 {
+    color: #b3b2af;
+  }
+}
+.text1 {
+  color: $color-blue-nav;
+}
+.input {
+  border-style: none;
+  width: 281px;
+  height: 22px;
+  margin-left: 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: rgb(240, 234, 234);
+}
+.link1 {
+  margin-left: 193px;
+  font-size: 12px;
+}
+.link2 {
+  margin-left: 32px;
+  font-size: 12px;
+}
+.button {
+  @extend %box_shadow_button;
+  background-color: rgb(21, 135, 211);
+  margin-left: 29px;
+  width: 289px;
+  height: 37px;
+  margin-top: 16px;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.text3 {
+  color: #b3b2af;
+  margin-left: 31px;
+}
+.figure {
+  margin: 0;
+}
